@@ -1,0 +1,18 @@
+.ontop-button{
+    &__primary-filter{
+        max-width: 100% !important;
+        .ontop-button__icon{
+            filter: brightness(75);
+            margin-left: 0 !important;
+            margin-right: 11px;
+        }
+    }
+    &__gray-filter{
+        max-width: 100% !important;
+        .ontop-button__icon{
+            filter: brightness(0);
+            margin-left: 0;
+            margin-right: 11px;
+        }
+    }
+}

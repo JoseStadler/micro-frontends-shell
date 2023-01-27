@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+    "lib": ["ES2022", "dom"],
+    "paths": {
+      "@css/*": ["src/assets/build/css/*"],
+      "@models/*": ["src/app/models/*"],
+      "@shared/*": ["src/app/modules/shared/*"],
+      "@service/*": ["src/app/services/*"],
+      "@services/*": ["src/app/services/*"],
+      "@environments/*": ["src/environments"],
+      "@ontop-components/*": [
+        "src/app/modules/web-components/web-components/*"
+      ],
+      "@enumerations/*": ["src/app/enumerations/*"],
+      "@wallet/*": ["src/app/modules/contractor/pages/wallet/*"],
+      "@util/*": ["src/app/util/*"],
+      "@directives/*": ["src/app/modules/directives/*"],
+      "@authorization/*": ["src/app/authorization/*"],
+      "@platform/*": ["src/app/platform/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

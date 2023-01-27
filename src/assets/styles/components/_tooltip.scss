@@ -1,0 +1,80 @@
+@use '../base/colors' as colors;
+@use '../utilities/utilities' as utilities;
+@use '../base/breakpoints' as breakpoints;
+
+.mat-tooltip-panel-above {
+  .mat-tooltip {
+    &::before {
+      content: ' ';
+      display: block;
+      left: 50%;
+      bottom: -15.7px;
+      transform: rotate(360deg) translate(-50%, 0%);
+    }
+  }
+}
+
+.mat-tooltip-panel-below {
+  .mat-tooltip {
+    &::before {
+      content: ' ';
+      display: block;
+      top: -15.7px;
+      left: 50%;
+      transform: rotate(180deg) translate(50%, 0%);
+    }
+  }
+}
+
+.mat-tooltip-panel-right,
+.mat-tooltip-panel-before {
+  .mat-tooltip {
+    &::before {
+      content: ' ';
+      display: block;
+      left: -7.7px;
+      top: 50%;
+      transform: rotate(90deg) translate(-50%, 50%);
+    }
+  }
+}
+
+.mat-tooltip-panel-left,
+.mat-tooltip-panel-after {
+  .mat-tooltip {
+    &::before {
+      content: ' ';
+      display: block;
+      right: -23.7px;
+      top: 50%;
+      transform: rotate(-90deg) translate(50%, -50%);
+    }
+  }
+  @include breakpoints.small {
+    margin-right: 20px;
+  }
+}
+
+.mat-tooltip {
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 4px;
+  letter-spacing: 0.25px;
+  max-width: 320px !important;
+  overflow: initial !important;
+  background-color: colors.$gray90;
+  box-shadow: 0px 8px 24px 0px #252a313d;
+  // box-shadow: 0px 4px 8px 0px #252a3129;
+  @include utilities.ontop-font-details(12px, 16px, 400, colors.$white);
+
+  &::before {
+    content: ' ';
+    display: none;
+    width: 16px;
+    height: 16px;
+    transform: rotate(90deg) translate(-50%, 50%);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url('./../../img/media/svg/ot-triangle-dark.svg');
+  }
+}

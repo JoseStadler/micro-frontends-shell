@@ -1,0 +1,11 @@
+@for $i from 1 through 100 {
+  .ontop-flex-grow-#{$i} {
+    flex-grow: $i;
+  }
+  .ontop-flex-basis-#{$i} {
+    flex-basis: ($i) * 1%;
+  }
+  .ontop-flex-row-gap-#{$i} {
+    row-gap: $i + px;
+  }
+}

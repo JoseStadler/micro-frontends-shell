@@ -1,0 +1,8 @@
+.footer-none {
+  display: none;
+}
+
+.verification-notification-container {
+  position: relative;
+  margin-bottom: 2rem;
+}

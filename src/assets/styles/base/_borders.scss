@@ -1,0 +1,38 @@
+@use './colors';
+
+@for $i from 0 through 20 {
+  // pixels
+  //generates classes like ontop-border-radius-1
+  .ontop-border-radius-#{$i} {
+    border-radius: $i + px;
+  }
+  // percentages
+  //generates classes like ontop-border-radius-1p
+  .ontop-border-radius-#{$i}p {
+    border-radius: $i * 1%;
+  }
+  // pixels
+  //generates classes like ontop-border-width-1
+  .ontop-border-width-#{$i} {
+    border-width: $i + px;
+  }
+}
+
+.ontop-border-solid {
+  border-style: solid;
+}
+.ontop-border-dashed {
+  border-style: dashed;
+}
+.ontop-border-dotted {
+  border-style: dotted;
+}
+.ontop-border-double {
+  border-style: double;
+}
+.ontop-border-hidden {
+  border-style: hidden;
+}
+.ontop-border-none {
+  border-style: none;
+}

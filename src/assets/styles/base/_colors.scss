@@ -1,0 +1,892 @@
+/*
+Color
+*/
+
+// PRIMARY COLORS
+$primary-light: #ffe8eb;
+$primary-light2: #ffb8c1;
+$primary-light3: #ff2d55;
+$primary-light4: #ffbbc1;
+$primary-light5: #ffe6ea;
+$primary-light6: #ffdee2;
+$primary-light7: #fff0f2;
+$primary-light8: #ffacb7;
+$primary: #ff5a70;
+$primary-dark: #d13046;
+$red1: #de350b;
+
+$secondary-light: #999897;
+$secondary-medium: #525252;
+$secondary: #322b2b;
+
+$empty: transparent;
+$dark: #000000;
+$dark1: #19194a;
+$dark2: #464f60;
+$dark3: #101828;
+$dark4: #0c102b;
+$dark-text: #26293f;
+
+$white: #ffffff;
+$white100: #eeeeee;
+
+//HIGHLIGHTS GRAY
+
+$gray10: #f9f9f9;
+$gray11: #f0f0f0;
+$gray12: #fcfcfc;
+$gray20: #ededed;
+$gray22: #e8e8e8;
+$gray23: #f4f6f7;
+$gray30: #d3d4d3;
+$gray40: #b6b7b7;
+$gray42: #a3a3a3;
+$gray43: #acacac;
+$gray50: #898989;
+$gray60: #6b6b6b;
+$gray-600: #3d3d3d;
+$gray70: #545454;
+$gray71: #555555;
+$gray80: #3b3b3b;
+$gray90: #222222;
+$gray100: #111111;
+$gray110: #9a9ea5;
+$gray120: #dadada;
+$gray130: #333333;
+$gray140: #7c7b7b;
+$gray150: #d4d4d4;
+$gray160: #030229;
+$gray170: #f4f6f7;
+$gray180: #e8ecee;
+$gray200: #e4e4e7;
+$gray-100: #667085;
+$gray-200: #f1f1f1;
+$gray-800: #141414;
+$graytable: rgba(102, 102, 102, 0.16);
+$gray-amount: #3b3b3b;
+// INDICATORS
+
+$indicator-green: #caf0dd;
+$indicator-orange: #fbe3d0;
+$indicator-blue: #daf3f6;
+$indicator-gray: #ebebeb;
+
+//ACCOUNT
+
+$cypto-account: #ffe5b8;
+$payoneer-account: #ffddb9;
+
+// STATUS
+
+$request-light: #fef6ec;
+$approve-light: #eafaf2;
+$approve-light-100: #daf7e5;
+$rejected-light: #fcebe8;
+$rejected-dark: #f7c9c1;
+
+// HIGHLIGHTS
+
+$green-light: #eafaf2;
+$green: #36cf82;
+$green-dark: #229059;
+$green-dark20: #0e6e3e;
+$green-light-100: #48d67c;
+
+$violet-light: #f6e9f6;
+$violet: #a13ea1;
+$violet-dark: #6e2b6e;
+
+$blue-sky: #f9ffff;
+$blue-sky-100: #eeffff;
+$blue-sky-200: #daf3f6;
+$blue-light: #def3ff;
+$blue-light-1: #d4e4ff;
+$blue-light-2: #e7f0ff;
+$blue-light-3: #e4f2ff;
+$blue-light-4: #b1d7ec;
+$blue-light-5: #bfe0ff;
+$blue-light-6: #def3ff;
+$blue-light-7: #c5cee0;
+$blue: #48acd6;
+$blue-dark: #1e7480;
+$blue-dark-1: #045eb3;
+$blue-dark-2: #12455a;
+$blue-acento: #3b50ff;
+
+$orange-light: #fbe3d0;
+$orange-light-1: #f8d2b3;
+$orange-light-2: #faead6;
+$orange-light-100: #fff9cc;
+$orange: #f28d15;
+$orange1: #ff9500;
+$orange2: rgba(255, 149, 0, 0.15);
+$orange3: #cc7205;
+$orange-dark: #9f591f;
+
+$yellow-light: #fef6ec;
+
+$red-light: #ffccd6;
+$red-light1: #e34a30;
+$red-light2: #f8d7ce;
+$red: #f00030;
+$red-dark-100: #e34a30;
+$red-dark: #8a001c;
+$red-dark-1: #ad3041;
+$red-dark-100: #e34a30;
+$red-dark-200: #b63b26;
+$red-dark-300: #de350b;
+$red-dark-400: #b22a09;
+$red: #f00030;
+
+$blue-darkness: #121843;
+$blue-dark: #1b204a;
+$blue-dark-degraded: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ),
+  #161e54;
+
+// OLD COLORS
+
+$grey: #888888;
+$grey1: #67636a;
+$grey2: #999897;
+$grey3: #bdc0c0;
+$grey4: #f9f9f9;
+$grey5: #898989;
+$grey6: #dcdcdc;
+$grey7: #d9d9d9;
+$grey8: #ababab;
+$grey9: #a0a0a0;
+
+$grey10: #dbdbdb;
+$grey11: #686868;
+$grey12: #b2b2b2;
+$grey13: #efefef;
+$grey14: #9ea0aa;
+$grey15: #575f6e;
+$grey16: #494747;
+$gray25: #eaeaeb;
+$gray26: #959595;
+
+$hoverprimary1: #d13046;
+$hoverdark1: #545454;
+$hoverwhite1: #d3d4d3;
+$hoversuccess1: rgba(54, 207, 130, 0.78);
+
+$hoverprimary2: #ffe8eb;
+$hoverdark2: rgba(211, 212, 211, 0.7);
+$hoverwhite2: rgba(211, 212, 211, 0.3);
+$hoversuccess2: rgba(54, 207, 130, 0.78);
+
+$badget-bg: #eaeaeb;
+
+$overlay: #2d2d2db3;
+
+$primary3: rgba(255, 90, 111, 0.14);
+$primary4: #ff8388;
+$primary6: #db4164;
+$primary7: #b72d59;
+$primary8: #931c4d;
+$primary9: #7a1146;
+
+$neutro5: #c4c4c4;
+$neutro5: #d3d3d6;
+$neutro6: #322b2b;
+$neutro7: #2a1d1f;
+$neutro8: #221216;
+$neutro9: #1c0b11;
+$neutro100: #f5f5f5;
+$disable: #b4b5b5;
+$disablelight: #ebebeb;
+
+$success: #36cf82;
+$successlight: #c2e0d1;
+$successdark: #125a2d;
+
+$alert: #f29d42;
+$alertlight: #e7d6c4;
+$yellow: #fff6bd;
+
+$yellow-light: #fef6ec;
+// $yellow-light: #f3edc8;
+$yellow-light: #fef6ec;
+$yellow-dark1: #e1d79b;
+$orange-dark-100: #5a5112;
+
+$error: #da0010;
+$errorlight: #e3b7ba;
+
+$rate: #f8cd61;
+$rategray: #f5f5f5;
+
+// SHADOW
+
+$shadow-ouline-primary: 0 0 0 0.08rem rgba(255, 90, 112, 0.12);
+$shadow-ouline-alert: 0 0 0 0.08rem rgba(242, 157, 66, 0.2);
+$shadow-ouline-error: 0 0 0 0.08rem rgba(218, 0, 16, 0.2);
+$shadow-ouline-success: 0 0 0 0.08rem rgba(54, 207, 130, 0.2);
+
+$shadow-btn: 0 0 0 0.2rem rgb(255 161 156 / 25%);
+$shadow-card: 0px 30px 60px 0px rgba(0, 0, 0, 0.08);
+$sombra16: 0px 4px 15px rgba(0, 0, 0, 0.1);
+$sombra13: 0 1px 13px 0 rgba(0, 0, 0, 0.1);
+$sombra20: 0px 4px 20px rgba(0, 0, 0, 0.25);
+$hover: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+
+// BORDER
+$border: 5px;
+$border1: 2px 8px 2px 8px;
+$border2: 8px;
+
+// THEME
+
+$colors: (
+  'primary-light': #ffe8eb,
+  'primary': #ff5a70,
+  'primary-dark': #d13046,
+  'primary-light8': #ffacb7,
+  'secondary-light': #999897,
+  'secondary': #322b2b,
+  'empty': transparent,
+  'white': #ffffff,
+  'dark': #000000,
+  'dark1': #19194a,
+  'dark2': #464f60,
+  //HIGHLIGHTS GRAY
+  'gray10': #f9f9f9,
+  'gray11': #f0f0f0,
+  'gray20': #ededed,
+  'gray21': #e7e7e7,
+  'gray25': #eaeaeb,
+  'gray30': #d3d4d3,
+  'gray35': #d4d4d4,
+  'gray36': #c8c7c7,
+  'gray40': #b6b7b7,
+  'gray41': #b9b9b9,
+  'gray42': #a3a3a3,
+  'gray43': #acacac,
+  'gray45': #9a9ea5,
+  'gray50': #898989,
+  'gray60': #6b6b6b,
+  'gray70': #545454,
+  'gray80': #3b3b3b,
+  'gray85': #403f3f,
+  'gray90': #222222,
+  'gray100': #111111,
+  'gray110': #9a9ea5,
+  'gray115': #a7a8ab,
+  'gray120': #dadada,
+  'gray130': #333333,
+  'gray140': #7c7b7b,
+  'gray150': #d4d4d4,
+  'gray155': #242731,
+  'gray160': #030229,
+  // HIGHLIGHTS
+  'green-light': #eafaf2,
+  'green-light2': #c1f0d9,
+  'green-light3': #deede5,
+  'green': #36cf82,
+  'green-dark': #229059,
+  'green-dark20': #0e6e3e,
+  'violet-light': #f6e9f6,
+  'violet': #a13ea1,
+  'violet-dark': #6e2b6e,
+  'blue-light': #daf3f6,
+  'blue-light-1': #d4e4ff,
+  'blue-light-2': #e7f0ff,
+  'blue-light-3': #e4f2ff,
+  'blue': #48acd6,
+  'blue-dark': #1e7480,
+  'blue-dark-1': #045eb3,
+  'orange-light1': #fef6ec,
+  'orange-light': #fbe3d0,
+  'orange': #f28d15,
+  'orange-light-1': #f8d2b3,
+  'orange-light-2': #faead6,
+  'orange3': #cc7205,
+  'orange-dark': #9f591f,
+  'orange-dark1': #c74e32,
+  'red-light': #ffccd6,
+  'red-light1': #e34a30,
+  'red': #f00030,
+  'red-dark': #8a001c,
+  'red-dark-1': #ad3041,
+  // Old Colors
+  'grey': #888888,
+  'grey1': #67636a,
+  'grey2': #999897,
+  'grey3': #bdc0c0,
+  'grey4': #f9f9f9,
+  'grey5': #898989,
+  'grey8': #ababab,
+  'hoverprimary1': #d13046,
+  'hoverdark1': #545454,
+  'hoverwhite1': #d3d4d3,
+  'hoversuccess1': rgba(54, 207, 130, 0.78),
+  'hoverprimary2': #ffe8eb,
+  'hoverdark2': rgba(211, 212, 211, 0.7),
+  'hoverwhite2': rgba(211, 212, 211, 0.3),
+  'hoversuccess2': rgba(54, 207, 130, 0.78),
+  'primary3': #fae9eb,
+  'primary4': #ff8388,
+  'primary6': #db4164,
+  'primary7': #b72d59,
+  'primary8': #931c4d,
+  'primary9': #7a1146,
+  'neutro5': #d3d3d6,
+  'neutro6': #322b2b,
+  'neutro7': #2a1d1f,
+  'neutro8': #221216,
+  'neutro9': #1c0b11,
+  'disable': #b4b5b5,
+  'disablelight': #ebebeb,
+  'success': #36cf82,
+  'successlight': #c2e0d1,
+  'alert': #f29d42,
+  'alertlight': #e7d6c4,
+  'error': #da0010,
+  'errorlight': #e3b7ba,
+  'rate': #f8cd61,
+  'rategray': #f5f5f5,
+  'shadow-ouline-primary': 0 0 0 0.08rem rgba(255, 90, 112, 0.12),
+  'shadow-ouline-alert': 0 0 0 0.08rem rgba(242, 157, 66, 0.2),
+  'shadow-ouline-error': 0 0 0 0.08rem rgba(218, 0, 16, 0.2),
+  'shadow-ouline-success': 0 0 0 0.08rem rgba(54, 207, 130, 0.2),
+);
+
+@mixin color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name} {
+      color: $hex;
+    }
+  }
+}
+
+// generates classes like ontop-color-primary
+.ontop-color {
+  @include color-modifiers;
+}
+// generates classes like ontop-background-color-primary
+//background colors
+@mixin background-color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name} {
+      background-color: $hex;
+    }
+  }
+}
+//background hover colors
+@mixin background-hover-color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name}:hover {
+      background-color: $hex;
+    }
+  }
+}
+// generates classes like ontop-background-color-primary
+.ontop-background-color {
+  @include background-color-modifiers;
+}
+.ontop-background-hover-color {
+  @include background-hover-color-modifiers;
+}
+// Text gradiente
+
+$text-moz: -moz-linear-gradient(
+  90deg,
+  rgba(255, 90, 112, 1) 0%,
+  rgba(153, 152, 151, 1) 100%
+);
+$text-webkit: -webkit-linear-gradient(
+  90deg,
+  rgba(255, 90, 112, 1) 0%,
+  rgba(153, 152, 151, 1) 100%
+);
+$text-linear: linear-gradient(
+  90deg,
+  rgba(255, 90, 112, 1) 0%,
+  rgba(153, 152, 151, 1) 100%
+);
+$text-ie: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5a70",endColorstr="#999897",GradientType=1);
+
+// generates classes like ontop-color-primary
+.ontop-color {
+  @include color-modifiers;
+}
+
+//background colors
+@mixin background-color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name} {
+      background-color: $hex;
+    }
+  }
+}
+
+// generates classes like ontop-background-color-primary
+.ontop-background-color {
+  @include background-color-modifiers;
+}
+
+//background hover colors
+@mixin background-hover-color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name}:hover {
+      background-color: $hex;
+    }
+  }
+}
+
+// generates classes like ontop-background-hover-color-primary
+.ontop-background-hover-color {
+  @include background-hover-color-modifiers;
+}
+
+//background colors
+@mixin background-color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name} {
+      background-color: $hex;
+    }
+  }
+}
+
+// generates classes like ontop-background-color-primary
+.ontop-background-color {
+  @include background-color-modifiers;
+}
+
+//background hover colors
+@mixin background-hover-color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name}:hover {
+      background-color: $hex;
+    }
+  }
+}
+
+// generates classes like ontop-background-hover-color-primary
+.ontop-background-hover-color {
+  @include background-hover-color-modifiers;
+}
+
+// Text gradiente
+
+$text-moz: -moz-linear-gradient(
+  90deg,
+  rgba(255, 90, 112, 1) 0%,
+  rgba(153, 152, 151, 1) 100%
+);
+$text-webkit: -webkit-linear-gradient(
+  90deg,
+  rgba(255, 90, 112, 1) 0%,
+  rgba(153, 152, 151, 1) 100%
+);
+$text-linear: linear-gradient(
+  90deg,
+  rgba(255, 90, 112, 1) 0%,
+  rgba(153, 152, 151, 1) 100%
+);
+$text-ie: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5a70",endColorstr="#999897",GradientType=1);
+
+/*
+Color
+*/
+
+// PRIMARY COLORS
+$primary-light: #ffe8eb;
+$primary-light2: #ffb8c1;
+$primary-light3: #ff2d55;
+$primary-light4: #ffbbc1;
+$primary-light5: #ffe6ea;
+$primary-light6: #ffdee2;
+$primary: #ff5a70;
+$primary-dark: #d13046;
+
+$secondary-light: #999897;
+$secondary: #322b2b;
+
+$empty: transparent;
+$dark: #000000;
+$dark1: #19194a;
+$dark2: #464f60;
+$dark-text: #26293f;
+
+$white: #ffffff;
+$white100: #eeeeee;
+
+//HIGHLIGHTS GRAY
+
+$gray10: #f9f9f9;
+$gray11: #f0f0f0;
+$gray12: #fcfcfc;
+$gray20: #ededed;
+$gray22: #e8e8e8;
+$gray23: #f4f6f7;
+$gray30: #d3d4d3;
+$gray40: #b6b7b7;
+$gray42: #a3a3a3;
+$gray43: #acacac;
+$gray50: #898989;
+$gray60: #6b6b6b;
+$gray-600: #3d3d3d;
+$gray70: #545454;
+$gray80: #3b3b3b;
+$gray90: #222222;
+$gray100: #111111;
+$gray110: #9a9ea5;
+$gray120: #dadada;
+$gray130: #333333;
+$gray140: #7c7b7b;
+$gray150: #d4d4d4;
+$gray160: #030229;
+$gray170: #f4f6f7;
+$gray180: #e8ecee;
+$gra190: #e5ecee;
+$graytable: rgba(102, 102, 102, 0.16);
+$gray-new-800: #282525;
+// INDICATORS
+
+$indicator-green: #caf0dd;
+$indicator-orange: #fbe3d0;
+$indicator-blue: #daf3f6;
+$indicator-gray: #ebebeb;
+
+//ACCOUNT
+
+$cypto-account: #ffe5b8;
+$payoneer-account: #ffddb9;
+
+// STATUS
+
+$request-light: #fef6ec;
+$approve-light: #eafaf2;
+$approve-light-100: #daf7e5;
+$rejected-light: #fcebe8;
+$rejected-dark: #f7c9c1;
+
+// HIGHLIGHTS
+
+$green-light: #daf7e5;
+$green: #36cf82;
+$green-dark: #125a2d;
+$green-dark20: #0e6e3e;
+$green-light-100: #48d67c;
+
+$violet-light: #f6e9f6;
+$violet: #a13ea1;
+$violet-dark: #6e2b6e;
+
+$blue-sky: #f9ffff;
+$blue-sky-100: #eeffff;
+$blue-sky-200: #daf3f6;
+$blue-light: #def3ff;
+$blue-light-1: #d4e4ff;
+$blue-light-2: #e7f0ff;
+$blue-light-3: #e4f2ff;
+$blue-light-4: #b1d7ec;
+$blue-light-5: #bfe0ff;
+$blue-light-6: #def3ff;
+$blue: #48acd6;
+$blue-dark: #1e7480;
+$blue-dark-1: #045eb3;
+$blue-dark-2: #12455a;
+$blue-acento: #3b50ff;
+
+$orange-light: #fbe3d0;
+$orange-light-1: #f8d2b3;
+$orange-light-2: #faead6;
+$orange-light-100: #fff9cc;
+$orange: #f28d15;
+$orange1: #ff9500;
+$orange2: rgba(255, 149, 0, 0.15);
+$orange3: #cc7205;
+$orange-dark: #9f591f;
+$orange-dark-100: #5a5112;
+$yellow: #fff6bd;
+$yellow-light: #f3edc8;
+
+$red-light: #ffccd6;
+$red-light1: #e34a30;
+$red-light2: #f8d7ce;
+$red: #f00030;
+$red-dark: #8a001c;
+$red-dark-100: #e34a30;
+$red-dark-200: #b63b26;
+$red-dark-300: #de350b;
+$red: #f00030;
+
+$blue-darkness: #121843;
+$blue-dark: #1b204a;
+$blue-dark-degraded: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ),
+  #161e54;
+
+// OLD COLORS
+
+$grey: #888888;
+$grey1: #67636a;
+$grey2: #999897;
+$grey3: #bdc0c0;
+$grey4: #f9f9f9;
+$grey5: #898989;
+$grey6: #dcdcdc;
+$grey7: #d9d9d9;
+$grey8: #ababab;
+$grey9: #a0a0a0;
+$grey10: #dbdbdb;
+$grey11: #686868;
+$grey12: #b2b2b2;
+$grey13: #efefef;
+$grey14: #9ea0aa;
+$grey15: #575f6e;
+$gray25: #eaeaeb;
+
+$hoverprimary1: #d13046;
+$hoverdark1: #545454;
+$hoverwhite1: #d3d4d3;
+$hoversuccess1: rgba(54, 207, 130, 0.78);
+
+$hoverprimary2: #ffe8eb;
+$hoverdark2: rgba(211, 212, 211, 0.7);
+$hoverwhite2: rgba(211, 212, 211, 0.3);
+$hoversuccess2: rgba(54, 207, 130, 0.78);
+
+$badget-bg: #eaeaeb;
+
+$overlay: #2d2d2db3;
+
+$primary3: rgba(255, 90, 111, 0.14);
+$primary4: #ff8388;
+$primary6: #db4164;
+$primary7: #b72d59;
+$primary8: #931c4d;
+$primary9: #7a1146;
+$pink: #ffdce1;
+
+$neutro5: #c4c4c4;
+$neutro5: #d3d3d6;
+$neutro6: #322b2b;
+$neutro7: #2a1d1f;
+$neutro8: #221216;
+$neutro9: #1c0b11;
+
+$disable: #b4b5b5;
+$disablelight: #ebebeb;
+
+$success: #36cf82;
+$successlight: #c2e0d1;
+$successlight1: #d8f5dc;
+$successdark: #125a2d;
+
+$alert: #f29d42;
+$alertlight: #e7d6c4;
+
+$error: #da0010;
+$errorlight: #e3b7ba;
+
+$rate: #f8cd61;
+$rategray: #f5f5f5;
+
+// SHADOW
+
+$shadow-ouline-primary: 0 0 0 0.08rem rgba(255, 90, 112, 0.12);
+$shadow-ouline-alert: 0 0 0 0.08rem rgba(242, 157, 66, 0.2);
+$shadow-ouline-error: 0 0 0 0.08rem rgba(218, 0, 16, 0.2);
+$shadow-ouline-success: 0 0 0 0.08rem rgba(54, 207, 130, 0.2);
+
+$shadow-btn: 0 0 0 0.2rem rgb(255 161 156 / 25%);
+$shadow-card: 0px 30px 60px 0px rgba(0, 0, 0, 0.08);
+$sombra16: 0px 4px 15px rgba(0, 0, 0, 0.1);
+$sombra13: 0 1px 13px 0 rgba(0, 0, 0, 0.1);
+$sombra20: 0px 4px 20px rgba(0, 0, 0, 0.25);
+$hover: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+
+// BORDER
+$border: 5px;
+$border1: 2px 8px 2px 8px;
+$border2: 8px;
+
+// THEME
+
+$colors: (
+  'primary-light': #ffe8eb,
+  'primary': #ff5a70,
+  'primary-dark': #d13046,
+  'secondary-light': #999897,
+  'secondary': #322b2b,
+  'empty': transparent,
+  'white': #ffffff,
+  'dark': #000000,
+  'dark1': #19194a,
+  'dark2': #464f60,
+  //HIGHLIGHTS GRAY
+  'gray10': #f9f9f9,
+  'gray11': #f0f0f0,
+  'gray20': #ededed,
+  'gray21': #e7e7e7,
+  'gray25': #eaeaeb,
+  'gray30': #d3d4d3,
+  'gray35': #d4d4d4,
+  'gray36': #c8c7c7,
+  'gray40': #b6b7b7,
+  'gray41': #b9b9b9,
+  'gray42': #a3a3a3,
+  'gray43': #acacac,
+  'gray45': #9a9ea5,
+  'gray50': #898989,
+  'gray60': #6b6b6b,
+  'gray70': #545454,
+  'gray80': #3b3b3b,
+  'gray85': #403f3f,
+  'gray90': #222222,
+  'gray100': #111111,
+  'gray110': #9a9ea5,
+  'gray115': #a7a8ab,
+  'gray120': #dadada,
+  'gray130': #333333,
+  'gray140': #7c7b7b,
+  'gray150': #d4d4d4,
+  'gray155': #242731,
+  'gray160': #030229,
+  'gray170': #f4f6f7,
+  // HIGHLIGHTS
+  'green-light': #daf7e5,
+  'green-light2': #c1f0d9,
+  'green-light3': #deede5,
+  'green': #36cf82,
+  'green-dark': #125a2d,
+  'green-dark20': #0e6e3e,
+  'violet-light': #f6e9f6,
+  'violet': #a13ea1,
+  'violet-dark': hsl(300, 44%, 30%),
+  'blue-light': #def3ff,
+  'blue-light-1': #d4e4ff,
+  'blue-light-2': #e7f0ff,
+  'blue-light-3': #e4f2ff,
+  'blue': #48acd6,
+  'blue-dark': #1e7480,
+  'blue-dark-1': #045eb3,
+  'blue-dark-2': #12455a,
+  'orange-light1': #fef6ec,
+  'orange-light': #fbe3d0,
+  'orange': #f28d15,
+  'orange-light-1': #f8d2b3,
+  'orange-light-2': #faead6,
+  'orange3': #cc7205,
+  'orange-dark': #9f591f,
+  'orange-dark-100': #5a5112,
+  'orange-dark1': #c74e32,
+  'red-light': #ffccd6,
+  'red-light1': #e34a30,
+  'red': #f00030,
+  'red-dark': #8a001c,
+  'red-dark-300': #de350b,
+  'red-dark-400': #b22a09,
+  // Old Colors
+  'grey': #888888,
+  'grey1': #67636a,
+  'grey2': #999897,
+  'grey3': #bdc0c0,
+  'grey4': #f9f9f9,
+  'grey5': #898989,
+  'hoverprimary1': #d13046,
+  'hoverdark1': #545454,
+  'hoverwhite1': #d3d4d3,
+  'hoversuccess1': rgba(54, 207, 130, 0.78),
+  'hoverprimary2': #ffe8eb,
+  'hoverdark2': rgba(211, 212, 211, 0.7),
+  'hoverwhite2': rgba(211, 212, 211, 0.3),
+  'hoversuccess2': rgba(54, 207, 130, 0.78),
+  'primary3': #fae9eb,
+  'primary4': #ff8388,
+  'primary6': #db4164,
+  'primary7': #b72d59,
+  'primary8': #931c4d,
+  'primary9': #7a1146,
+  'neutro5': #d3d3d6,
+  'neutro6': #322b2b,
+  'neutro7': #2a1d1f,
+  'neutro8': #221216,
+  'neutro9': #1c0b11,
+  'disable': #b4b5b5,
+  'disablelight': #ebebeb,
+  'success': #36cf82,
+  'successdark': #125a2d,
+  'successlight': #c2e0d1,
+  'alert': #f29d42,
+  'alertlight': #e7d6c4,
+  'error': #da0010,
+  'errorlight': #e3b7ba,
+  'rate': #f8cd61,
+  'rategray': #f5f5f5,
+  'shadow-ouline-primary': 0 0 0 0.08rem rgba(255, 90, 112, 0.12),
+  'shadow-ouline-alert': 0 0 0 0.08rem rgba(242, 157, 66, 0.2),
+  'shadow-ouline-error': 0 0 0 0.08rem rgba(218, 0, 16, 0.2),
+  'shadow-ouline-success': 0 0 0 0.08rem rgba(54, 207, 130, 0.2),
+);
+
+@mixin color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name} {
+      color: $hex;
+    }
+  }
+}
+
+// generates classes like ontop-color-primary
+.ontop-color {
+  @include color-modifiers;
+}
+
+//background colors
+@mixin background-color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name} {
+      background-color: $hex;
+    }
+  }
+}
+
+// generates classes like ontop-background-color-primary
+.ontop-background-color {
+  @include background-color-modifiers;
+}
+
+//background hover colors
+@mixin background-hover-color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{'' + $name}:hover {
+      background-color: $hex;
+    }
+  }
+}
+
+// generates classes like ontop-background-hover-color-primary
+.ontop-background-hover-color {
+  @include background-hover-color-modifiers;
+}
+
+// Text gradiente
+
+$text-moz: -moz-linear-gradient(
+  90deg,
+  rgba(255, 90, 112, 1) 0%,
+  rgba(153, 152, 151, 1) 100%
+);
+$text-webkit: -webkit-linear-gradient(
+  90deg,
+  rgba(255, 90, 112, 1) 0%,
+  rgba(153, 152, 151, 1) 100%
+);
+$text-linear: linear-gradient(
+  90deg,
+  rgba(255, 90, 112, 1) 0%,
+  rgba(153, 152, 151, 1) 100%
+);
+$text-ie: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5a70",endColorstr="#999897",GradientType=1);

@@ -1,0 +1,53 @@
+.ontop-list{
+
+    &.ontop-list__cards-data{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        margin-bottom: 22px;
+
+        @include xl-large{
+            justify-content: space-around;
+        }
+    }
+
+    &.ontop-list__filter-group{
+
+        .card-type{
+            .ico{
+                img{
+                    width: 12px;
+                }
+            }
+        }
+
+        .card-type,
+        .select-look,
+        input{
+            @include ontop-font-details(18px !important, 28px !important, 500 !important, #9A9EA5 !important);
+            @include ontop-flexbox-param(flex, center, flex-start);
+            box-shadow: none !important;
+            background: transparent !important;
+            border: 1px solid #E1DFDF !important;
+        }
+
+
+
+        .ontop-list__f-list{
+            width: 100%;
+            height: auto;
+            @include ontop-flexbox-param(flex, center, flex-start);
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+    }
+
+    &.ontop-list__table{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}

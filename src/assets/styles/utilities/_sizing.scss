@@ -1,0 +1,53 @@
+@for $i from 1 through 100 {
+  // pixels
+  //generates classes like .ontop-height-1
+  .ontop-height-#{$i} {
+    height: ($i * 2 + px);
+  }
+  //generates classes like .ontop-width-1
+  .ontop-width-#{$i} {
+    width: ($i * 2 + px);
+  }
+  //generates classes like .ontop-min-height-1
+  .ontop-min-height-#{$i} {
+    min-height: ($i * 2 + px);
+  }
+  //generates classes like .ontop-min-width-1
+  .ontop-min-width-#{$i} {
+    min-width: ($i * 2 + px);
+  }
+  //generates classes like .ontop-max-height-1
+  .ontop-max-height-#{$i} {
+    max-height: ($i * 2 + px);
+  }
+  //generates classes like .ontop-max-width-1
+  .ontop-max-width-#{$i} {
+    max-width: ($i * 2 + px);
+  }
+
+  //percentages
+  //generates classes like .ontop-height-1p
+  .ontop-height-#{$i}p {
+    height: ($i * 1%);
+  }
+  //generates classes like .ontop-width-1p
+  .ontop-width-#{$i}p {
+    width: ($i * 1%);
+  }
+  //generates classes like .ontop-min-height-1p
+  .ontop-min-height-#{$i}p {
+    min-height: ($i * 1%);
+  }
+  //generates classes like .ontop-min-width-1p
+  .ontop-min-width-#{$i}p {
+    min-width: ($i * 1%);
+  }
+  //generates classes like .ontop-max-height-1p
+  .ontop-max-height-#{$i}p {
+    max-height: ($i * 1%);
+  }
+  //generates classes like .ontop-max-width-1p
+  .ontop-max-width-#{$i}p {
+    max-width: ($i * 1%);
+  }
+}

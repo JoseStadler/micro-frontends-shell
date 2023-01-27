@@ -1,0 +1,382 @@
+<nav
+  class="ontop-navbar"
+  [ngClass]="{ 'ontop-navbar--active-mobile': mobileToggle }"
+>
+  <div class="ontop-navbar__container">
+    <div class="ontop-navbar__brand">
+      <a [routerLink]="'/' + this.userType + '/home'">
+        <img
+          class="ontop-navbar__logo"
+          src="../../../../../assets/img/ontop-logo.png"
+          alt="ontop-logo"
+        />
+      </a>
+    </div>
+    <div class="ontop-navbar__routes">
+      <ng-container *ngFor="let item of navItems; let i = index">
+        <ng-container *ngIf="item.visible">
+          <!-- <ng-container *appHasPermission="item.permission"> -->
+          <div class="ontop-dropdown-navbar-items | dropdown">
+            <div
+              class="ontop-navbar__item"
+              [id]="'dropdownItemNav' + i"
+              (click)="navbarClick(item)"
+              [attr.data-toggle]="
+                item.itemsVisible && item.items?.length ? 'dropdown' : undefined
+              "
+              [attr.aria-haspopup]="
+                item.itemsVisible && item.items?.length ? 'true' : undefined
+              "
+              [attr.aria-expanded]="
+                item.itemsVisible && item.items?.length ? 'false' : undefined
+              "
+              [routerLink]="
+                item.itemsVisible && item.items?.length ? null : item.routerLink
+              "
+              [ngClass]="{ active: url.includes(item.active) }"
+            >
+              <img
+                *ngIf="item.img?.length"
+                [src]="item.img"
+                [alt]="item.label"
+              />
+              <!-- <ontop-icon
+                  class="ontop-navbar__item-icon"
+                  *ngIf="item.icon?.length"
+                  [name]="item.icon"103
+                  [color]="'gray50'"
+                  [size]="'20'"
+                  [type]="'outlined'"
+                >
+                </ontop-icon> -->
+              <span class="ontop-navbar__item-text">{{ item.label }}</span>
+              <!-- <ontop-icon
+                  class="ontop-navbar__item-icon-r"
+                  *ngIf="item.itemsVisible && item.items?.length"
+                  [name]="'expand_more'"
+                  [color]="'gray50'"
+                  [size]="'26'"
+                  [type]="'round'"
+                  id="dropdownMenuUser"
+                >
+                </ontop-icon> -->
+            </div>
+            <div
+              class="ontop-dropdown-navbar__menu | dropdown-menu"
+              [attr.aria-labelledby]="'dropdownItemNav' + i"
+              *ngIf="item.itemsVisible && item.items?.length"
+            >
+              <ng-container *ngFor="let subItem of item.items">
+                <ng-container *ngIf="subItem.visible">
+                  <!-- <ng-container *appHasPermission="subItem.permission"> -->
+                  <a
+                    class="ontop-dropdown-navbar__item"
+                    [routerLink]="subItem.routerLink"
+                    (click)="logAmplitudeEvent(subItem.amplitudeEvent)"
+                  >
+                    <span class="ontop-dropdown-navbar__item-title">
+                      {{ subItem.label }}
+                    </span>
+                  </a>
+                  <!-- </ng-container> -->
+                </ng-container>
+              </ng-container>
+            </div>
+          </div>
+          <!-- </ng-container> -->
+        </ng-container>
+      </ng-container>
+    </div>
+    <div class="ontop-navbar__actions">
+      <div class="whats-new-notifications beamerTrigger">
+        <span>NEW</span>
+      </div>
+      <div
+        class="notifications-ctn"
+        *ngIf="!upcomingPaymentsFiltersSetup?.show"
+      >
+        <div
+          *ngIf="userInfo?.role !== roleEnum.roles.ROLE_CONTRACTOR.desc"
+          ngbDropdown
+          class="d-inline-block"
+          #dropDownNtf
+        >
+          <div>
+            <img
+              src="assets/build/img/shopping.svg"
+              id="dropdownShopping"
+              ngbDropdownToggle
+              alt=""
+              width="30"
+              class="icon"
+            />
+            <!-- <span
+              *ngIf="paymentV2Service.recentPaymentsApproved?.length"
+              class="ntf-number"
+              >{{ paymentV2Service.recentPaymentsApproved?.length }}</span
+            > -->
+          </div>
+          <div
+            ngbDropdownMenu
+            aria-labelledby="dropdownShopping"
+            class="payment-ap-modal"
+          >
+            <!-- <ng-container
+              *ngIf="!paymentV2Service.recentPaymentsApproved?.length"
+            >
+              <img src="assets/build/img/invoice.svg" class="not-found" />
+              <span><strong>No invoices found</strong></span
+              ><br />
+              <span>You still have no recent approve payments</span>
+            </ng-container> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- <ontop-dropdown-notifications
+        class="ontop-dropdown-navbar-notifications d-none"
+        [userType]="userType"
+        [pendingNotificationsCount]="pendingNotificationsCount"
+        [notifications]="notifications"
+      >
+      </ontop-dropdown-notifications>
+      <app-user-images
+        class="ontop-navbar__avatar"
+        [stylesJson]="{
+          width: '45px',
+          height: '45px'
+        }"
+        [bin]="avatar"
+        [initials]="userInfo?.initial1 + userInfo?.initial2"
+      ></app-user-images> -->
+      <div
+        class="ontop-navbar__menu-mobile"
+        (click)="mobileToggle = !mobileToggle"
+      >
+        <!-- <ontop-icon
+          [name]="'menu'"
+          [color]="'gray50'"
+          [size]="'24'"
+          [type]="'default'"
+          *ngIf="!mobileToggle"
+        >
+        </ontop-icon>
+        <ontop-icon
+          [name]="'close'"
+          [color]="'gray50'"
+          [size]="'24'"
+          [type]="'default'"
+          *ngIf="mobileToggle"
+        >
+        </ontop-icon> -->
+      </div>
+      <div class="ontop-dropdown-navbar-items | dropdown">
+        <!-- <ontop-icon
+          class="ontop-navbar__select"
+          [name]="'expand_more'"
+          [color]="'gray50'"
+          [size]="'24'"
+          [type]="'round'"
+          id="dropdownMenuUser"
+          [attr.data-toggle]="navUser?.length ? 'dropdown' : undefined"
+          [attr.aria-haspopup]="navUser?.length ? 'true' : undefined"
+          [attr.aria-expanded]="navUser?.length ? 'false' : undefined"
+        >
+        </ontop-icon> -->
+        <div
+          class="ontop-dropdown-navbar__menu ontop-dropdown-navbar__menu--user | dropdown-menu dropdown-menu-right"
+          aria-labelledby="dropdownMenuUser"
+        >
+          <ng-container *ngFor="let userItem of navUser">
+            <ng-container *ngIf="userItem.visible">
+              <!-- <ng-container *appHasPermission="userItem.permission"> -->
+              <a
+                class="ontop-dropdown-navbar__item"
+                [routerLink]="userItem.routerLink"
+                [ngClass]="{ active: url.includes(userItem.active) }"
+              >
+                <div class="ontop-dropdown-navbar__item-title">
+                  <img
+                    *ngIf="userItem.img?.length"
+                    [src]="userItem.img"
+                    [alt]="userItem.label"
+                  />
+                  <!-- <ontop-icon
+                      *ngIf="userItem.icon?.length"
+                      class="ontop-dropdown-navbar__icon"
+                      [name]="userItem.icon"
+                      [color]="'gray40'"
+                      [size]="'22'"
+                      [type]="'default'"
+                    >
+                    </ontop-icon> -->
+                  <span class="ontop-dropdown-navbar__text">
+                    {{ userItem.label }}
+                  </span>
+                </div>
+              </a>
+              <!-- </ng-container> -->
+            </ng-container>
+          </ng-container>
+          <a
+            class="ontop-dropdown-navbar__item"
+            [routerLink]="'/' + userType + routeResources.userSettings"
+          >
+            <div class="ontop-dropdown-navbar__item-title">
+              <!-- <ontop-icon
+                class="ontop-dropdown-navbar__icon"
+                [name]="'settings'"
+                [color]="'gray40'"
+                [size]="'22'"
+                [type]="'default'"
+              >
+              </ontop-icon> -->
+              <span class="ontop-dropdown-navbar__text">
+                Account settings
+              </span>
+            </div>
+          </a>
+          <a class="ontop-dropdown-navbar__item" href="javascript:void(0);">
+            <div class="ontop-dropdown-navbar__item-title">
+              <!-- <ontop-icon
+                class="ontop-dropdown-navbar__icon"
+                [name]="'logout'"
+                [color]="'gray40'"
+                [size]="'22'"
+                [type]="'default'"
+              >
+              </ontop-icon> -->
+              <span class="ontop-dropdown-navbar__text"> Logout </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ontop-navbar__mobile">
+    <div
+      class="ontop-navbar__mobile-items | accordion"
+      id="accordionItemMobile"
+    >
+      <ng-container *ngFor="let item of navMobileItems; let i = index">
+        <ng-container *ngIf="item.visible">
+          <!-- <ng-container *appHasPermission="item.permission"> -->
+          <div
+            class="ontop-navbar__mobile-item"
+            (click)="mobileToggle = false"
+            [routerLink]="
+              item.itemsVisible && item.items?.length ? null : item.routerLink
+            "
+            [ngClass]="{ active: url.includes(item.active) }"
+          >
+            <div
+              class="ontop-navbar__mobile-header"
+              [id]="'accordionItemMobile-' + i"
+            >
+              <div
+                class="ontop-navbar__mobile-content"
+                data-toggle="collapse"
+                [attr.data-target]="'#collapse' + i"
+                aria-expanded="false"
+                [attr.aria-controls]="'collapse' + i"
+              >
+                <div class="ontop-navbar__mobile-info">
+                  <!-- <ontop-icon
+                      class="ontop-navbar__mobile-icon-l"
+                      [name]="item.icon"
+                      [color]="'gray50'"
+                      [size]="'20'"
+                      [type]="'round'"
+                    >
+                    </ontop-icon> -->
+                  <p class="ontop-navbar__mobile-title">{{ item.label }}</p>
+                </div>
+                <!-- <ontop-icon
+                    class="ontop-navbar__mobile-icon-r"
+                    [name]="'expand_more'"
+                    [color]="'gray50'"
+                    [size]="'26'"
+                    [type]="'round'"
+                    *ngIf="item.itemsVisible && item.items?.length"
+                  >
+                  </ontop-icon> -->
+              </div>
+            </div>
+            <div
+              class="ontop-navbar__mobile-body | collapse"
+              [id]="'collapse' + i"
+              [attr.aria-labelledby]="'accordionItemMobile-' + i"
+              data-parent="#accordionItemMobile"
+              *ngIf="item.itemsVisible && item.items?.length"
+            >
+              <ng-container *ngFor="let subItem of item.items">
+                <ng-container *ngIf="subItem.visible">
+                  <!-- <ng-container *appHasPermission="subItem.permission"> -->
+                  <div
+                    class="ontop-navbar__element"
+                    (click)="mobileToggle = !mobileToggle"
+                  >
+                    <a
+                      class="ontop-navbar__link"
+                      [routerLink]="subItem.routerLink"
+                    >
+                      {{ subItem.label }}
+                    </a>
+                  </div>
+                  <!-- </ng-container> -->
+                </ng-container>
+              </ng-container>
+            </div>
+          </div>
+          <!-- </ng-container> -->
+        </ng-container>
+      </ng-container>
+      <div
+        class="ontop-navbar__mobile-item"
+        [routerLink]="'/' + userType + routeResources.userSettings"
+      >
+        <div class="ontop-navbar__mobile-header">
+          <a class="ontop-navbar__mobile-content">
+            <div
+              class="ontop-navbar__mobile-info"
+              (click)="mobileToggle = !mobileToggle"
+            >
+              <!-- <ontop-icon
+                class="ontop-navbar__mobile-icon-l"
+                [name]="'settings'"
+                [color]="'gray50'"
+                [size]="'20'"
+                [type]="'round'"
+              >
+              </ontop-icon> -->
+              <p class="ontop-navbar__mobile-title">Account settings</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="ontop-navbar__mobile-item">
+        <div class="ontop-navbar__mobile-header">
+          <a class="ontop-navbar__mobile-content">
+            <div class="ontop-navbar__mobile-info">
+              <!-- <ontop-icon
+                class="ontop-navbar__mobile-icon-l"
+                [name]="'logout'"
+                [color]="'gray50'"
+                [size]="'20'"
+                [type]="'round'"
+              >
+              </ontop-icon> -->
+              <p class="ontop-navbar__mobile-title">Logout</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- <app-shopping-cart-summary-modal
+  *ngIf="this.isClient"
+  [invoiceCheckoutSummary]="paymentV2Service.invoiceCheckoutSummary"
+  [origin]="'menu'"
+  (paid)="getRecentPayments()"
+></app-shopping-cart-summary-modal> -->

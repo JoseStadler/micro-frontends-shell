@@ -1,0 +1,93 @@
+.ontop-badget{
+    padding: 2px 4px;
+    border-radius: $border;
+    background-color: $badget-bg;
+    @include ontop-font-details(15px, 20px, 400, $gray50);
+
+    &.ontop-badget--active{
+        color: $primary;
+        font-weight: 700;
+        background-color: #FAE9EB;
+    }
+
+    &.ontop-badget__button{
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        min-height: 32px;
+        background-color: #FAE3E6;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        @include ontop-font-details(12px, 16.2px, 400, $primary);
+
+        .ontop-badget__b-data{
+            max-width: 150px;
+            font-weight: 600;
+            margin-left: 5px;
+            text-align: left;
+            color: $primary !important;
+            @extend %ontop-truncate;
+        }
+
+        .ontop-badget__b-close{
+            color: $primary !important;
+            display: flex;
+            align-items: center;
+            margin-left: 16px;
+            transition: 0.3s;
+
+            &:active{
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    &.ontop-badget__status{
+        width: 100%;
+        padding: 4px 16px;
+        border-radius: 20px;
+        @include ontop-flexbox-param(flex, center, center);
+
+        &.ontop-badget__status--success{
+            background-color: #D6F1E4;
+            width: 70%;
+            .ontop-badget__text{
+                color: #36CF82;
+            }
+        }
+
+        &.ontop-badget__status--pending{
+            background-color: #F7DDC2;
+            width: 100%;
+            .ontop-badget__text{
+                color: #F29D42;
+            }
+        }
+
+        &.ontop-badget__status--incomplete{
+            background-color: #F5D9DC;
+            width: 80%;
+            .ontop-badget__text{
+                color: #DA0010CC;
+            }
+        }
+
+        &.ontop-badget__status--ended{
+            background-color: #E9E9E9;
+            width: 70%;
+            .ontop-badget__text{
+                color: #B4B5B5;
+            }
+        }
+
+        .ontop-badget__text{
+            max-width: 90%;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 600;
+            text-align: center;
+            @extend %ontop-truncate;
+            text-transform: uppercase;
+        }
+    }
+}

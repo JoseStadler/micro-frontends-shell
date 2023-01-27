@@ -1,0 +1,435 @@
+@use '/src/app/modules/web-components/assets/styles/base/colors' as colors;
+@use '/src/app/modules/web-components/assets/styles/base/variables' as variables;
+
+/*
+  Typography
+  ==========================================================================
+*/
+
+/**
+ * @license
+ *
+ * Font Family: General Sans
+ * Designed by: Frode Helland
+ * URL: https://www.fontshare.com/fonts/general-sans
+ * © 2021 Indian Type Foundry
+ *
+ * Font Styles:
+ * General Sans Variable(Variable font)
+ * General Sans Variable Italic(Variable font)
+ * General Sans Extralight
+ * General Sans Extralight Italic
+ * General Sans Light
+ * General Sans Light Italic
+ * General Sans Regular
+ * General Sans Italic
+ * General Sans Medium
+ * General Sans Medium Italic
+ * General Sans Semibold
+ * General Sans Semibold Italic
+ * General Sans Bold
+ * General Sans Bold Italic
+ *
+*/
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 700.0;
+*
+* available axes:
+
+* 'wght' (range from 200.0 to 700.0)
+
+*/
+
+@font-face {
+  font-family: 'GeneralSans-Variable';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Variable.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Variable.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Variable.ttf')
+      format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 700.0;
+*
+* available axes:
+
+* 'wght' (range from 200.0 to 700.0)
+
+*/
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-VariableItalic.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-VariableItalic.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-VariableItalic.ttf')
+      format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Extralight.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Extralight.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Extralight.ttf')
+      format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-ExtralightItalic.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-ExtralightItalic.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-ExtralightItalic.ttf')
+      format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Light.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Light.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Light.ttf')
+      format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-LightItalic.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-LightItalic.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-LightItalic.ttf')
+      format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GeneralSan';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Regular.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Regular.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Regular.ttf')
+      format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Italic.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Italic.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Italic.ttf')
+      format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Medium.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Medium.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Medium.ttf')
+      format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-MediumItalic.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-MediumItalic.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-MediumItalic.ttf')
+      format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Semibold.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Semibold.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Semibold.ttf')
+      format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-SemiboldItalic.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-SemiboldItalic.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-SemiboldItalic.ttf')
+      format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Bold.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Bold.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-Bold.ttf')
+      format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.getontop.com/commons/fonts/general/GeneralSans-BoldItalic.woff2')
+      format('woff2'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-BoldItalic.woff')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/general/GeneralSans-BoldItalic.ttf')
+      format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+// FONTS WEIGHT
+.ontop-typo__normal {
+  font-weight: normal;
+}
+
+.ontop-typo__bold {
+  font-weight: bold;
+}
+
+.ontop-typo__lighter {
+  font-weight: lighter;
+}
+
+// Typo class
+
+// Headings
+
+.ontop-h__large-title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 52px;
+  color: colors.$secondary;
+  letter-spacing: -2px;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  color: colors.$secondary;
+  letter-spacing: 0.25px;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  color: colors.$secondary;
+  letter-spacing: 0.25px;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: auto;
+  color: colors.$secondary;
+  letter-spacing: 0.25px;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__h4 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: colors.$secondary;
+  letter-spacing: 0.25px;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__h5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: colors.$secondary;
+  letter-spacing: 0.25px;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__body-text-1 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: colors.$secondary;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__body-text-2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: colors.$secondary;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__body-copy {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: colors.$gray70;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__body-small-1 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: colors.$gray70;
+  letter-spacing: -0.4px;
+  font-family: variables.$typo-base;
+}
+
+.ontop-h__body-small-2 {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  color: colors.$gray70;
+  letter-spacing: -0.4px;
+  font-family: variables.$typo-base;
+}
+
+.ontop-font-weight-100 {
+  font-weight: 100;
+}
+.ontop-font-weight-200 {
+  font-weight: 200;
+}
+.ontop-font-weight-300 {
+  font-weight: 300;
+}
+.ontop-font-weight-400 {
+  font-weight: 400;
+}
+.ontop-font-weight-500 {
+  font-weight: 500;
+}
+.ontop-font-weight-600 {
+  font-weight: 600;
+}
+.ontop-font-weight-700 {
+  font-weight: 700;
+}
+.ontop-font-weight-800 {
+  font-weight: 800;
+}
+.ontop-font-weight-900 {
+  font-weight: 900;
+}
+
+// Pre code highlight
+.ontop-highlight {
+  &__pre {
+    background: colors.$neutro6;
+    border-radius: 10px;
+    border: 1px solid colors.$gray20;
+  }
+  &__code {
+    color: colors.$primary;
+    font-size: 13px;
+  }
+}
+
+.ontop-font-size-1 {
+  font-size: 1px;
+}
+
+.ontop-font-size-2 {
+  font-size: 2px;
+}
+
+.ontop-font-size-3 {
+  font-size: 3px;
+}
+
+.ontop-font-size-4 {
+  font-size: 4px;
+}
+
+.ontop-font-size-5 {
+  font-size: 5px;
+}
+
+.ontop-font-size-6 {
+  font-size: 6px;
+}
+
+.ontop-font-size-7 {
+  font-size: 7px;
+}
+
+.ontop-font-size-8 {
+  font-size: 8px;
+}
+
+.ontop-font-size-9 {
+  font-size: 9px;
+}
+
+.ontop-font-size-10 {
+  font-size: 10px;
+}
+
+.ontop-line-height-16 {
+  line-height: 16px;
+}

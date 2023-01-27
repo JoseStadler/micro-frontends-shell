@@ -1,0 +1,139 @@
+@use '/src/app/modules/web-components/assets/styles/base/colors' as colors;
+@use '/src/app/modules/web-components/assets/styles/base/breakpoints' as
+  breakpoints;
+@use '/src/app/modules/web-components/assets/styles/utilities/utilities' as
+  utilities;
+
+.ontop-table {
+  width: 100%;
+
+  &.ontop-table__content--seven {
+    .ontop-table__header {
+      .ontop-table__h-title {
+        width: calc(100% / 7);
+      }
+    }
+  }
+
+  &.ontop-table__content--six {
+    .ontop-table__header {
+      .ontop-table__h-title {
+        width: calc(100% / 6);
+      }
+    }
+  }
+
+  .ontop-table__header {
+    width: 100%;
+    padding: 0 18px;
+    @include utilities.ontop-flexbox-param(flex, center, space-between);
+
+    @include breakpoints.large {
+      display: none;
+    }
+
+    .ontop-table__h-title {
+      margin: 0 10px;
+      //text-align: center;
+      @extend %ontop-truncate;
+      @include utilities.ontop-font-details(16px, 21.48px, 400, colors.$gray80);
+    }
+  }
+
+  .ontop-table__items {
+    width: 100%;
+    margin-top: 16px;
+
+    @include breakpoints.large {
+      display: none;
+    }
+  }
+
+  .ontop-table__mobile {
+    display: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background-color: colors.$white;
+    box-shadow: 0px 4.357px 11.34px 0px #0000000a;
+
+    @include breakpoints.large {
+      display: block;
+    }
+
+    .ontop-table__m-item {
+      padding: 12px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      background-color: #f9f9f9;
+
+      &:nth-child(even) {
+        background-color: colors.$white;
+      }
+
+      .ontop-table__m-left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        @extend %ontop-truncate;
+
+        .ontop-table__m-form-check {
+          top: 19%;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          transform: translate(0, -50%);
+
+          .ontop-table__m-input {
+            top: -12%;
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+            transform: translate(0, 50%);
+          }
+          .ontop-table__m-check {
+            margin: 0;
+            width: 12px;
+            height: 12px;
+
+            img {
+              width: 8px;
+              height: 8px;
+            }
+          }
+        }
+
+        .ontop-table__m-title {
+          margin-left: 30px;
+          padding-right: 20px;
+          letter-spacing: 0.25px;
+          @include utilities.ontop-font-details(
+            12px,
+            16px,
+            700,
+            #222222 !important
+          );
+          @extend %ontop-truncate;
+        }
+      }
+
+      .ontop-table__m-right {
+        width: 50%;
+        padding-right: 20px;
+        @extend %ontop-truncate;
+        .ontop-table__m-data {
+          @include utilities.ontop-font-details(
+            14px,
+            20px,
+            400,
+            #3b3b3b !important
+          );
+          @extend %ontop-truncate;
+        }
+      }
+    }
+  }
+}

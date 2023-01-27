@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Ontop-icon';
+  src: url('https://assets.getontop.com/commons/fonts/icons/Ontop-icon.eot?bu7t4d');
+  src: url('https://assets.getontop.com/commons/fonts/icons/Ontop-icon.eot?bu7t4d#iefix')
+      format('embedded-opentype'),
+    url('https://assets.getontop.com/commons/fonts/icons/Ontop-icon.ttf?bu7t4d')
+      format('truetype'),
+    url('https://assets.getontop.com/commons/fonts/icons/Ontop-icon.woff?bu7t4d')
+      format('woff'),
+    url('https://assets.getontop.com/commons/fonts/icons/Ontop-icon.svg?bu7t4d#Ontop-icon')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='ontop-icon-'],
+[class*=' ontop-icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Ontop-icon' !important;
+  speak-as: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ontop-icon-search:before {
+  content: '\e906';
+}
+.ontop-icon-check:before {
+  content: '\e900';
+}
+.ontop-icon-closed-rounded:before {
+  content: '\e901';
+}
+.ontop-icon-eye-closed:before {
+  content: '\e902';
+}
+.ontop-icon-eye-open:before {
+  content: '\e903';
+}
+.ontop-icon-info:before {
+  content: '\e904';
+}
+.ontop-icon-warning:before {
+  content: '\e905';
+}

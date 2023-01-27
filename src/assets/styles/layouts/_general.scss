@@ -1,0 +1,11 @@
+@use '/src/app/modules/web-components/assets/styles/base/breakpoints' as
+  breakpoints;
+
+.ontop-container {
+  width: 89.58%;
+  max-width: 1440px;
+
+  @include breakpoints.large {
+    width: 90%;
+  }
+}

@@ -1,0 +1,464 @@
+@use "src/assets/styles/base/colors" as colors;
+@use "src/assets/styles/base/variables" as variables;
+@use "src/assets/styles/base/_breakpoints.scss" as breakpoints;
+@use "src/assets/styles/utilities/utilities" as utilities;
+
+:host {
+  width: 100%;
+
+  .ontop-navbar {
+    &__actions {
+      .ontop-navbar__avatar {
+        ::ng-deep .lastname {
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
+
+.ontop-navbar {
+  width: 100%;
+  height: 90px;
+  z-index: 3;
+  position: fixed;
+  background-color: colors.$white;
+  box-shadow: 0px 4px 24px 0px #00000014;
+  @include utilities.ontop-flexbox-param(flex, center, center);
+
+  @include breakpoints.large {
+    height: 65px;
+    &.ontop-navbar--active-mobile {
+      .ontop-navbar__mobile {
+        transform: translate(0);
+      }
+    }
+  }
+
+  &__container {
+    width: 89.58%;
+    height: 100%;
+    @include utilities.ontop-flexbox-param(flex, center, space-between);
+
+    @include breakpoints.xxl-large {
+      width: 95%;
+    }
+
+    @include breakpoints.large {
+      width: 89.58%;
+    }
+  }
+
+  &__brand {
+    min-width: 12.15%;
+    .ontop-navbar__logo {
+      width: 95px;
+      height: auto;
+    }
+  }
+
+  &__routes {
+    display: block;
+    height: 100%;
+    @include utilities.ontop-flexbox-param(flex, center, center);
+    @include breakpoints.large {
+      display: none;
+    }
+
+    .ontop-navbar__item {
+      outline: none;
+      cursor: pointer;
+      padding: 16px 23.17px;
+      height: 100%;
+      @include utilities.ontop-flexbox-param(flex, center, center);
+
+      @include breakpoints.xxl-large {
+        padding: 16px 8px;
+      }
+
+      &:hover {
+        .ontop-navbar__item-icon,
+        .ontop-navbar__item-icon-r {
+          ::ng-deep .mat-icon {
+            color: colors.$primary;
+          }
+        }
+
+        .ontop-navbar__item-text {
+          color: colors.$primary;
+        }
+      }
+
+      &[aria-expanded="true"] {
+        .ontop-navbar__item-icon-r {
+          transform: rotate(180deg);
+        }
+      }
+
+      .ontop-navbar__item-icon {
+        margin-right: 8px;
+      }
+
+      .ontop-navbar__item-text {
+        margin-right: 4px;
+        letter-spacing: 0.25px;
+        @include utilities.ontop-font-details(20px, 24px, 500, colors.$gray50);
+
+        @include breakpoints.xxl-large {
+          @include utilities.ontop-font-details(
+            16px,
+            24px,
+            500,
+            colors.$gray50
+          );
+        }
+      }
+
+      .ontop-navbar__item-icon-r {
+        transition: 0.3s;
+      }
+
+      &.active {
+        .ontop-navbar__item-icon,
+        .ontop-navbar__item-icon-r {
+          ::ng-deep .mat-icon {
+            color: colors.$primary;
+          }
+        }
+        .ontop-navbar__item-text {
+          color: colors.$primary;
+        }
+        .dropdown a.dropdown-toggle:after {
+          width: 16px;
+          height: 16px;
+          border: none;
+          background: url("/assets/build/img/angle_down_pink.svg") no-repeat
+            center;
+          background-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    min-width: 12.15%;
+    @include utilities.ontop-flexbox-param(flex, center, center);
+
+    .icon {
+      cursor: pointer;
+    }
+
+    .ontop-navbar__notifications {
+      cursor: pointer;
+      position: relative;
+      margin-right: 20px;
+      ontop-badge {
+        top: 1px;
+        right: 1px;
+        position: absolute;
+      }
+    }
+
+    .whats-new-notifications {
+      margin-right: 10px;
+      padding: 4px 8px;
+      background-color: colors.$primary-light;
+      border-radius: 12px;
+      color: colors.$primary;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .notifications-ctn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 10px;
+
+      .ntf-number {
+        color: #fff;
+        width: 13px;
+        justify-content: center;
+        background-color: #e34a30;
+        font-size: 10px;
+        border-radius: 50%;
+        padding: 0px 3px;
+        border: -2px solid #fff;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        position: absolute;
+        top: 0px;
+        right: -2px;
+      }
+
+      .not-found {
+        margin: 0 auto 10px auto;
+        display: block;
+      }
+
+      p {
+        font-size: 12px;
+        margin: 0 auto 10px auto;
+        color: #898989;
+        text-align: center;
+      }
+
+      span {
+        text-align: center;
+        color: #898989;
+        font-size: 11px;
+        margin: 0 auto 0 auto;
+        display: block;
+      }
+      strong {
+        margin-top: 24px;
+        display: block;
+      }
+
+      button {
+        margin-top: 16px;
+      }
+
+      .past24-title {
+        color: #000;
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom: 26px;
+        width: 120px;
+        margin-top: 10px;
+
+        button {
+          width: 145px;
+          margin-top: 15px;
+          margin-left: 10px;
+        }
+      }
+      .pay-now-desc {
+        width: 170px;
+        margin-bottom: 10px !important;
+
+        b {
+          color: #ff5a70;
+          cursor: pointer;
+        }
+      }
+
+      .payment-ap-modal {
+        box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.25);
+        background-color: #fff;
+        height: 210px;
+        width: 210px;
+        z-index: 3;
+        border-radius: 8px;
+        font-size: 14px;
+        padding: 24px !important;
+        position: absolute;
+        left: -170px !important;
+
+        .title {
+          margin-bottom: 6px;
+          font-weight: normal;
+          font-size: 14px;
+          text-align: start;
+        }
+
+        .pay-out {
+          margin: 0;
+          margin-left: 16px;
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          width: 122.43px;
+          color: #fff;
+          height: 32px;
+          background: #ff5a70;
+          margin-left: 15px;
+          border-radius: 6.26087px;
+        }
+
+        .sub-total-container {
+          display: flex;
+          border-top: 1px solid #d3d4d3;
+          border-bottom: 1px solid #d3d4d3;
+          font-size: 12px;
+          padding: 6px 0;
+          justify-content: space-between;
+          margin: 6px 0;
+
+          span {
+            margin: 0;
+          }
+        }
+
+        .desc {
+          font-size: 10px;
+          text-align: center;
+          margin-bottom: 16px;
+          display: block;
+        }
+      }
+    }
+
+    .ontop-navbar__archive {
+      cursor: pointer;
+      position: relative;
+      margin-right: 20px;
+      @include breakpoints.large {
+        display: none;
+      }
+      ontop-badge {
+        top: -9px;
+        right: -9px;
+        position: absolute;
+      }
+    }
+
+    .ontop-navbar__menu-mobile {
+      display: none;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      @include breakpoints.large {
+        display: block;
+      }
+    }
+
+    .ontop-navbar__avatar {
+      margin-right: 12px;
+      display: block;
+      @include breakpoints.large {
+        display: none;
+      }
+    }
+
+    .ontop-navbar__select {
+      cursor: pointer;
+      &[aria-expanded="true"] {
+        ::ng-deep .mat-icon {
+          transition: 0.3s;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__mobile {
+    width: 100%;
+    height: calc(100vh - 65px);
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 0px;
+    position: absolute;
+    background: colors.$white;
+    transition: 0.4s;
+    transform: translate(100%);
+    border-top: 0.5px solid colors.$gray30;
+
+    .ontop-navbar__mobile-items {
+      .ontop-navbar__mobile-item {
+        &:last-child {
+          .ontop-navbar__mobile-header {
+            .ontop-navbar__mobile-content {
+              border-bottom: none;
+            }
+          }
+        }
+
+        .ontop-navbar__mobile-header {
+          padding-left: 12px;
+          padding-right: 12px;
+          .ontop-navbar__mobile-content {
+            height: 44px;
+            padding: 8px 4px;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: colors.$white;
+            border-bottom: 0.5px solid colors.$gray30;
+            @include utilities.ontop-flexbox-param(flex, center, space-between);
+
+            &[aria-expanded="false"] {
+              .ontop-navbar__mobile-icon-r {
+                ::ng-deep .mat-icon {
+                  transition: 0.3s;
+                  transform: rotate(0deg);
+                }
+              }
+            }
+
+            &[aria-expanded="true"] {
+              .ontop-navbar__mobile-icon-r {
+                ::ng-deep .mat-icon {
+                  transition: 0.3s;
+                  transform: rotate(180deg);
+                }
+              }
+            }
+
+            .ontop-navbar__mobile-info {
+              @include utilities.ontop-flexbox-param(flex, center, flex-start);
+
+              .ontop-navbar__mobile-icon-l {
+                margin-right: 4px;
+              }
+
+              .ontop-navbar__mobile-title {
+                margin: 0;
+                letter-spacing: 0.15px;
+                @include utilities.ontop-font-details(
+                  14px,
+                  20px,
+                  500,
+                  colors.$gray50
+                );
+              }
+            }
+          }
+        }
+
+        .ontop-navbar__mobile-body {
+          padding: 0px 16px;
+          background-color: colors.$gray10;
+
+          .ontop-navbar__element {
+            margin: 0;
+            cursor: pointer;
+            height: 36px;
+
+            .ontop-navbar__link {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              letter-spacing: 0.15px;
+              @include utilities.ontop-font-details(
+                14px,
+                20px,
+                400,
+                colors.$gray50
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.view-details {
+  margin: 10px 0 !important;
+  cursor: pointer !important;
+  font-size: 15px !important;
+}

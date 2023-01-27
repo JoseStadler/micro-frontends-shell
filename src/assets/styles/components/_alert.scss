@@ -1,0 +1,64 @@
+.ontop-alert {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  color: $gray100;
+  border-radius: 10px;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: $rategray;
+
+  &.ontop-alert--success {
+    padding: 0 25px;
+    min-height: 40px;
+    max-width: 366px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: $success;
+
+    .ontop-alert__s-icon {
+      width: 18px;
+      margin-right: 17px;
+    }
+
+    .ontop-alert__s-text {
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 700;
+      color: $white;
+    }
+  }
+
+  &.ontop-alert--warning {
+    background-color: rgb(255, 233, 214);
+
+    .ontop-alert__icon {
+      color: $orange;
+      background-color: rgba(242, 141, 21, 0.3);
+    }
+    .ontop-alert__text {
+      color: $orange;
+    }
+  }
+
+  .ontop-alert__icon {
+    width: 29px;
+    height: 29px;
+    padding: 20px;
+    font-size: 20px;
+    color: $gray100;
+    line-height: 22px;
+    margin-right: 23px;
+    border-radius: 50%;
+    background-color: $neutro5;
+    @include ontop-flexbox-center();
+  }
+
+  .ontop-alert__text {
+    margin: 0;
+    font-size: 12px;
+    color: $gray100;
+    line-height: 14px;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,21 @@
+.ontop-progress{
+    &.ontop-progress--top{
+        .ontop-progress__timeline{
+            top: 0;
+            left: 0px;
+            height: 6px;
+            z-index: 2;
+            width: 100%;
+            position: absolute;
+            background: $disablelight;
+            .ontop-progress__progress{
+                top: 0;
+                left: 0;
+                height: 6px;
+                width: 100%;
+                position: absolute;
+                background: $primary;
+            }
+        }
+    }
+}

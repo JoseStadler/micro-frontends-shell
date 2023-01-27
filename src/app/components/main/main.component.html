@@ -1,0 +1,30 @@
+<app-menu2
+  *ngIf="!loading"
+  [userInfo]="userInfo"
+  [notifications]="navNotifications"
+>
+</app-menu2>
+<!-- <app-new-onboarding *ngIf="!isContractor"></app-new-onboarding> -->
+<main
+  id="platform"
+  *ngIf="!loading"
+  class="horizontal-menu"
+  [ngClass]="{
+    'horizontal-menu-hiring': isShowStyleHiring
+  }"
+  style="padding: 100px"
+>
+  <!-- <ng-container *ngIf="showVerificationNotification">
+    <div class="verification-notification-container">
+      <app-metamap-verification-notification
+        [entityId]="userData?.id"
+        (hideNotification)="showVerificationAlert = false"
+      >
+      </app-metamap-verification-notification>
+    </div>
+  </ng-container> -->
+
+  <router-outlet></router-outlet>
+
+  <app-footer [ngClass]="{ 'footer-none': isShowStyleHiring }"></app-footer>
+</main>

@@ -1,0 +1,51 @@
+@use '/src/app/modules/web-components/assets/styles/base/colors' as colors;
+@use '/src/app/modules/web-components/assets/styles/base/breakpoints' as
+  breakpoints;
+
+.ontop-nav-tab {
+  &.ontop-nav-tab__basic {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @include breakpoints.xl-large {
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    .ontop-nav-tab__b-title {
+      left: 0;
+      bottom: 6px;
+      color: #000;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28.8px;
+      position: absolute;
+    }
+
+    .ontop-nav-tab__b-item {
+      margin: 0 25px;
+
+      @include breakpoints.xl-large {
+        display: none;
+      }
+
+      .ontop-nav-tab__b-link {
+        &.active {
+          .ontop-badget {
+            background-color: #fae9eb;
+            color: colors.$primary;
+            font-weight: 700;
+          }
+        }
+
+        .ontop-badget {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

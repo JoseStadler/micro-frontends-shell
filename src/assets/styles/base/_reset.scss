@@ -1,0 +1,47 @@
+@use '/src/app/modules/web-components/assets/styles/base/variables' as variables;
+/*
+  Reset
+  ==========================================================================
+*/
+
+*,
+html,
+body {
+  margin: 0;
+  font-family: variables.$typo-base;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+b {
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+img {
+  user-select: none;
+}
+
+// material
+
+mat-icon {
+  font-family: 'Material Icons';
+}
+
+::ng-deep .mat-dialog-container {
+  border-radius: 10px !important;
+}
+
+.ontop-after-d-none::after {
+  display: none;
+}

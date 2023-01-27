@@ -1,0 +1,6 @@
+export enum MenuIndex {
+  COMPANY_INFO = 0,
+  PERSONAL_INFO = 1,
+  COMPANY_MANAGERS = 2,
+  SHAREHOLDERS = 3,
+}
